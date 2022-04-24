@@ -37,5 +37,11 @@ namespace SimpleSnake.GameObjects
             SetVerticalLine(0);
             SetVerticalLine(this.LeftX - 1);
         }
+
+        public bool IsPointOfWall(Point snake)
+        {
+            return snake.TopY == 0 || snake.LeftX == 0 ||
+                    snake.LeftX == this.LeftX - 1 || snake.TopY == this.TopY; 
+        }
     }
 }

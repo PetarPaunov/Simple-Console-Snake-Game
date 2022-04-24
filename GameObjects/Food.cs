@@ -43,8 +43,9 @@ namespace SimpleSnake.GameObjects
 
         public bool IsFoodPoint(Point snake)
         {
-            return snake.TopY == this.TopY && 
-                   snake.LeftX == this.LeftX;
+            bool isPoint = snake.TopY == this.TopY &&
+                   snake.LeftX == this.LeftX; ;
+            return isPoint;
         }
     }
 }
